@@ -11,6 +11,16 @@ import javax.persistence.Table;
 @Entity
 public class Movie {
 	
+	public Movie(Integer id, String name, int year, int ratings) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.year = year;
+		this.ratings = ratings;
+	}
+	
+	public Movie() {}
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
