@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "5f6f2ca7-49ba-41d8-8546-096b8cec78d6",
+		"name": "Movie",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/movies"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Movies By Year",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/movies/year/2011"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Movies By Ratings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/movies/rating/5"
+			},
+			"response": []
+		},
+		{
+			"name": "Save New Movie",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Movie6\",\r\n    \"ratings\": \"1\",\r\n    \"year\": \"2010\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/movies"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Existing Movie",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 6,\r\n    \"name\": \"Movie6\",\r\n    \"year\": 2010,\r\n    \"ratings\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/movies"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Existing Movie",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:8080/movies/6"
+			},
+			"response": []
+		}
+	]
+}
